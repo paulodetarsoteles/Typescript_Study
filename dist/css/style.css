@@ -1,0 +1,14 @@
+body {
+    background-color: #153436;
+    
+    /* Additional styling starts below. */
+    
+    font-family: 'Lexend Deca', sans-serif;
+    width: 800px; 
+    margin: auto;
+    color: #dddddd;
+  } 
+  a {
+    font-family:'Courier New', Courier, monospace;
+    color: #ffffff;
+  }

@@ -14,6 +14,30 @@ const varTs3: string = "teste";
 const varTs4: number[] = [1, 2, 3];
 
 console.log(varTs1 + ". " + varTs2 + " - "+ varTs3);
-console.log(varTs3.toUpperCase);
+console.log(varTs3.toUpperCase());
 console.log(typeof varTs3);
 console.log(varTs4 + " - " + varTs4.length);
+
+varTs4.push(4, 5, 6);
+
+console.log(varTs4);
+
+let myTuple: [number, string, boolean];
+myTuple = [1, "teste", false];
+
+console.log(myTuple);
+
+const myObjLiteral: {cod: number; name: string; active: boolean} = {
+    cod: 1, 
+    name: "Paulo", 
+    active: true
+};
+myObjLiteral.active = false;
+
+console.log(myObjLiteral);
+
+let myAny: any;
+myAny = 1;
+myAny = "teste";
+myAny = true;
+myAny = [];

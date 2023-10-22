@@ -30,3 +30,20 @@ myAny = 1;
 myAny = "teste";
 myAny = true;
 myAny = [];
+let myUnionType;
+myUnionType = "teste";
+myUnionType = 3;
+let z1 = 3;
+let z2 = "teste";
+//enum
+var Size;
+(function (Size) {
+    Size["P"] = "Pequeno";
+    Size["M"] = "Medio";
+    Size["G"] = "Grande";
+})(Size || (Size = {}));
+const camisa = {
+    name: "Gola V",
+    tamanho: Size.M
+};
+console.log(camisa);

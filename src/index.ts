@@ -41,3 +41,26 @@ myAny = 1;
 myAny = "teste";
 myAny = true;
 myAny = [];
+
+let myUnionType: string | number;
+myUnionType = "teste";
+myUnionType = 3;
+
+//type alias
+type myAliasType = string | number;
+let z1: myAliasType = 3; 
+let z2: myAliasType = "teste";
+
+//enum
+enum Size {
+    P = "Pequeno", 
+    M = "Medio", 
+    G = "Grande"
+}
+
+const camisa = {
+    name: "Gola V", 
+    tamanho: Size.M
+}
+
+console.log(camisa);

@@ -18,4 +18,5 @@ Caso queira que a compilação seja automática basta digitar tsc -w
 Quando vc utiliza o :number ou :string isso é chamado no typescript de annotation
 Se vc não por a annotation o tipo é pegue po inferência, mas só de vc está usando o typescript a variável fica tipada
 
-* No caso do Any pode ser usado mas vai contra a filosofia de tipagem do typescript
+* No caso do Any ou o UnionType podem ser usados mas vai contra a filosofia de tipagem do typescript
+Já o uso do alias vc pode criar um tipo com o union  batiza-lo normalmente

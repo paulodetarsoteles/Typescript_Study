@@ -7,4 +7,9 @@ tsc --version
 Quando criar a pasta index.html e apontar o caminho para o index.js
 Digitar no console tsc --init para iniciar o projeto typescript no diretório onde ele cria automaticamente um arquivo de configuração
 Detalhes que esse comando deve ser digitado no console de dentro da pasta com permissão de administrador
+Após fazer as configurações no arquivo de configuração rootDir e outDir digitar tsc no terminal para a compilação
 
+* Caso tenha algum problema de permissão de assinatura nos comandos digitar o comando abaixo: 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Quando compilar pela primeira vez ele já vai criar a pasta que foi configurada no arquivo tsconfig e o arquivo javascript transpilado do arquivo typescript

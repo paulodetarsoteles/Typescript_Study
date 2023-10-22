@@ -13,3 +13,7 @@ Após fazer as configurações no arquivo de configuração rootDir e outDir dig
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 Quando compilar pela primeira vez ele já vai criar a pasta que foi configurada no arquivo tsconfig e o arquivo javascript transpilado do arquivo typescript
+Caso queira que a compilação seja automática basta digitar tsc -w
+
+Quando vc utiliza o :number ou :string isso é chamado no typescript de annotation
+Se vc não por a annotation o tipo é pegue po inferência, mas só de vc está usando o typescript a variável fica tipada

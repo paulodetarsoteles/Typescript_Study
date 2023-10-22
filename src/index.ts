@@ -64,3 +64,11 @@ const camisa = {
 }
 
 console.log(camisa);
+
+//literal types 
+let autenticado: "true" | null;
+
+autenticado = "true";
+console.log(autenticado);
+autenticado = null;
+console.log(null);

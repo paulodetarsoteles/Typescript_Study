@@ -47,3 +47,9 @@ const camisa = {
     tamanho: Size.M
 };
 console.log(camisa);
+//literal types 
+let autenticado;
+autenticado = "true";
+console.log(autenticado);
+autenticado = null;
+console.log(null);

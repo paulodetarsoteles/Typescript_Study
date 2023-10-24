@@ -21,3 +21,6 @@ Se vc não por a annotation o tipo é pegue po inferência, mas só de vc está 
 * No caso do Any ou o UnionType podem ser usados mas vai contra a filosofia de tipagem do typescript
 Já o uso do alias vc pode criar um tipo com o union  batiza-lo normalmente
 Literal types vc pode restringir exatamente o q aquela variável poderá ser. 
+
+*Para usar o decorator tem q ir no arquivo tsconfig e descomentar o experimentalDecorators
+Todo decorator é uma função q deve retornar uma nova função

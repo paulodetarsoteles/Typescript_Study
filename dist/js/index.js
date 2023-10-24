@@ -1,5 +1,11 @@
 "use strict";
 //variável em javascript normal
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 const varJs1 = 1;
 const varJs2 = true;
 const varJs3 = "teste";
@@ -101,3 +107,65 @@ const ar3 = ["Um", "Dois", "Três"];
 showAndCountArrayItens(ar1);
 showAndCountArrayItens(ar2);
 showAndCountArrayItens(ar3);
+class User {
+    constructor(userId, name, active) {
+        this.userId = userId;
+        this.name = name;
+        this.active = active;
+    }
+    showUserName() {
+        console.log(`O nome desse usuário é ${this.name}`);
+    }
+}
+const zeca = new User(1, "Zeca", true);
+console.log(zeca);
+zeca.showUserName();
+//classe com uso de interfaces
+class Car {
+    constructor(brand, wheels) {
+        this.brand = brand;
+        this.wheels = wheels;
+    }
+    showBrand() {
+        console.log(`Brand: ${this.brand}`);
+    }
+    showWheels() {
+        console.log(`Wheels: ${this.wheels}`);
+    }
+}
+const car1 = new Car("VW", 10);
+car1.showBrand();
+car1.showWheels();
+//herança
+class SuperCar extends Car {
+    constructor(brand, wheels, enginee) {
+        super(brand, wheels);
+        this.enginee = enginee;
+    }
+}
+const car2 = new SuperCar("Fiat", 10, 1000);
+car2.showBrand();
+car2.showWheels();
+console.log(`Enginee: ${car2.enginee}`);
+//decorators
+function BaseParameters() {
+    return function (constructor) {
+        return class extends constructor {
+            constructor() {
+                super(...arguments);
+                this.id = Math.random();
+                this.createdAt = new Date();
+            }
+        };
+    };
+}
+let Person = class Person {
+    constructor(name) {
+        this.name = name;
+    }
+};
+Person = __decorate([
+    BaseParameters()
+], Person);
+const person = new Person("Paulo");
+console.log(person);

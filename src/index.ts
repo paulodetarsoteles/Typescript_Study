@@ -72,3 +72,65 @@ autenticado = "true";
 console.log(autenticado);
 autenticado = null;
 console.log(null);
+
+//Interfaces
+interface MathParams {
+    num1: number; 
+    num2: number;
+}; 
+
+function sumTwoNumbers(nums: MathParams){
+    return nums.num1 + nums.num2;
+};
+console.log(sumTwoNumbers({ num1: 1, num2: 2 }));
+
+function multipleTwoNumbers(nums: MathParams){
+    return nums.num1 * nums.num2;
+};
+console.log(multipleTwoNumbers({ num1: 1, num2: 2 }));
+
+function newMathForm(nums: MathParams){
+    return console.log(multipleTwoNumbers(nums) / sumTwoNumbers(nums));
+}; 
+
+newMathForm({ num1: 2, num2: 2 });
+
+const exampleParamInterface: MathParams = {
+    num1: 2, 
+    num2: 10
+};
+
+newMathForm(exampleParamInterface);
+
+//narrowing -> checagem de tipos
+function narrowExample(info: number | boolean){
+    if (typeof info === "number"){
+        console.log(`O número é ${info}`);
+        return;
+    }
+    console.log("Não foi passado um número válido");
+}
+
+narrowExample(1);
+narrowExample(true);
+
+//generics
+function showAndCountArrayItens<T>(arr: T[]){
+    if (arr.length > 0){
+        console.log(arr.length);
+
+        arr.forEach(item => {
+           console.log(`Item: ${item}`); 
+        });
+    }
+    else
+        console.log("Array inválido ou vazio");
+}
+
+const ar1 = [true, 2, "oi" ];
+const ar2 = [1, 2, 3]; 
+const ar3 = ["Um", "Dois", "Três"];
+
+showAndCountArrayItens(ar1);
+showAndCountArrayItens(ar2);
+showAndCountArrayItens(ar3);
